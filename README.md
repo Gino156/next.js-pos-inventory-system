@@ -1,4 +1,3 @@
-cat << 'EOF' > README.md
 # 🛒 Next.js POS & Inventory Management System
 
 A modern, fast, and scalable **Point of Sale (POS) and Inventory Management System** designed for small businesses. Built with **Next.js (App Router)**, **TypeScript**, **Tailwind CSS**, and powered by **Supabase** for real-time database management, storage, and authentication.
@@ -41,3 +40,33 @@ A modern, fast, and scalable **Point of Sale (POS) and Inventory Management Syst
 ```bash
 git clone [https://github.com/Gino156/next.js-pos-inventory-system.git](https://github.com/Gino156/next.js-pos-inventory-system.git)
 cd next.js-pos-inventory-system
+
+### 2. Install Dependencies
+```bash
+npm install
+
+### 3. Create Environmental Setup
+Create a .env.local file in the root directory and add your Supabase credentials:
+```bash
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+
+### 4. Run Development Server
+```bash
+npm run dev
+
+Open http://localhost:3000 in your browser to view the application.
+
+## Project Structure
+├── src/
+│   ├── app/
+│   │   ├── products/        # Product & Inventory Management Page
+│   │   ├── dashboard/       # Main Overview & Analytics
+│   │   ├── login/           # Authentication Page
+│   │   ├── page.tsx         # Root Landing / POS Interface
+│   │   └── layout.tsx       # Root App Layout
+│   ├── lib/
+│   │   └── supabase/        # Supabase Client Configuration
+│   └── types/               # TypeScript Type Definitions
+├── public/                  # Static Assets
+└── README.md
