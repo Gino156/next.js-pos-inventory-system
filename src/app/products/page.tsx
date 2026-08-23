@@ -69,7 +69,7 @@ export default function ProductsManagementPage() {
       const mappedProducts = prodData.map((p: any) => ({
         ...p,
         price: p.price ?? 0,
-        stock_qty: p.stock_qty ?? p.stock_quantity ?? 0,
+        stock_qty: p.stock_qty ?? p.stock_qty ?? 0,
       }));
       setProducts(mappedProducts);
     }
@@ -112,7 +112,6 @@ export default function ProductsManagementPage() {
       name,
       price: parseFloat(price) || 0,
       stock_qty: parsedStock,
-      stock_quantity: parsedStock,
       image_url: imageUrl || null,
       category_id: categoryId || null,
     };
@@ -197,7 +196,7 @@ export default function ProductsManagementPage() {
                       ₱{Number(prod.price || 0).toFixed(2)}
                     </p>
                     <p className="text-xs text-slate-400 mt-1">
-                      Stock: <span className="font-semibold text-slate-700">{prod.stock_qty ?? prod.stock_quantity ?? 0}</span>
+                      Stock: <span className="font-semibold text-slate-700">{prod.stock_qty ?? prod.stock_qty ?? 0}</span>
                     </p>
                   </div>
                 </div>
